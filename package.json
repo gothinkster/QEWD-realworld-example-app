@@ -1,0 +1,23 @@
+{
+  "name": "qewd-conduit",
+  "version": "1.0.0",
+  "description": "QEWD-based Conduit RESTFUL Back-end",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "qewd-router": "",
+    "bcrypt": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robtweed/qewd-conduit.git"
+  },
+  "author": "Rob Tweed, M/Gateway Developments Ltd",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/robtweed/qewd-conduit/issues"
+  },
+  "homepage": "https://github.com/robtweed/qewd-conduit#readme"
+}
