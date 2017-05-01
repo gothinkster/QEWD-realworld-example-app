@@ -35,7 +35,7 @@ var config = {
   port: 8080,
   poolSize: 2,
   database: {
-    type: 'gtm'
+    type: 'redis'
   }
 };
 
