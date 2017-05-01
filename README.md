@@ -1,3 +1,11 @@
+# ![QEWD Example App](lhttps://cloud.githubusercontent.com/assets/556934/25587724/182f95fc-2e5a-11e7-83db-1541c1bee128.png)
+
+> ### Example QEWD Back-end codebase that adheres to the [RealWorld](https://github.com/gothinkster/realworld-example-apps) spec and API.
+
+This repo is functionality complete — PR's and issues welcome!
+
+----------
+
 # qewd-conduit: QEWD-based Back-end for RealWorld Conduit Application
  
 Rob Tweed <rtweed@mgateway.com>  
