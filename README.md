@@ -5,8 +5,6 @@
 This repo is functionality complete — PR's and issues welcome!
 
 ----------
-
-# qewd-conduit: QEWD-based Back-end for RealWorld Conduit Application
  
 Rob Tweed <rtweed@mgateway.com>  
 25 January 2017, M/Gateway Developments Ltd [http://www.mgateway.com](http://www.mgateway.com)  
@@ -14,6 +12,8 @@ Rob Tweed <rtweed@mgateway.com>
 Twitter: @rtweed
 
 Google Group for discussions, support, advice etc: [http://groups.google.co.uk/group/enterprise-web-developer-community](http://groups.google.co.uk/group/enterprise-web-developer-community)
+
+----------
 
 ## Installing
 
