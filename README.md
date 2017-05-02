@@ -14,20 +14,12 @@ Twitter: @rtweed
 Google Group for discussions, support, advice etc: [http://groups.google.co.uk/group/enterprise-web-developer-community](http://groups.google.co.uk/group/enterprise-web-developer-community)
 
 ----------
-
-## Installing
-
-       npm install qewd-conduit
-
-See the /startup folder for the QEWD startup file (*qewd.js*), which should be copied to your QEWD 
-master directory, eg ~/qewd or ~/conduit, depending on where you installed QEWD itself.
-
 	   
 ## About qewd-conduit
 
-  *qewd-conduit* is a QEWD-based implementation of the REST back-end for the 
+  *qewd-conduit* is a full implementation of the REST back-end for the 
   [RealWorld Conduit](https://medium.com/@ericsimons/introducing-realworld-6016654d36b5)
-  application.
+  application using [QEWD](http://qewdjs.com).
 
   *qewd-conduit* requires [QEWD](https://github.com/robtweed/qewd) to be installed on your server
   (see below).

@@ -1,6 +1,6 @@
 {
   "name": "qewd-conduit",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "QEWD-based Conduit RESTFUL Back-end",
   "main": "index.js",
   "scripts": {
