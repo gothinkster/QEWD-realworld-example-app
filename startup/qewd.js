@@ -36,7 +36,8 @@ var config = {
   poolSize: 2,
   database: {
     type: 'redis'
-  }
+  },
+  cors: true
 };
 
 var routes = [

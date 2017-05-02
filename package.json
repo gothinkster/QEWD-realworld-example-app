@@ -1,6 +1,6 @@
 {
   "name": "qewd-conduit",
-  "version": "1.1.5",
+  "version": "1.2.0",
   "description": "QEWD-based Conduit RESTFUL Back-end",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,9 @@
   },
   "dependencies": {
     "qewd-router": "",
-    "bcrypt": ""
+    "bcrypt": "",
+    "email-validator": "",
+    "valid-url": ""
   },
   "repository": {
     "type": "git",
