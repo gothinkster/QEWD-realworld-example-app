@@ -118,7 +118,11 @@ RealWorld Conduit API specification for Not Found errors.
 
 ### Starting QEWD
 
-Once you're happy with your QEWD startup file, start it up.  You can either run it manually, eg:
+Once you're happy with your QEWD startup file, copy it to your QEWD installation directory, eg to:
+
+       ~/qewd/qewd.js
+
+Then start it up.  You can either run it manually, eg:
 
          cd ~/qewd   (or whatever directory you installed QEWD in)
          node qewd
@@ -162,7 +166,7 @@ all subsequent processing of the request is handled by *qewd-conduit*.
 
 Everything starts in the file you'll find in the repo at */lib/conduit.js*
 
-When the module is first loaded, its init() function is automatically invoked.  You'll see that 
+When the module is first loaded, its *init()* function is automatically invoked.  You'll see that 
 this defines all the URI routing for RealWorld Conduit's APIs.  The routing is actually managed by
 a sub-module named [qewd-router](https://github.com/robtweed/qewd-router)
 
@@ -175,7 +179,7 @@ The processing of each specific API is handled by the module specified in the *r
         handler: users.authenticate
       }
 
-This specifies that POST requests for /api/users/login will be handled by the users.authenticate
+This specifies that POST requests for */api/users/login* will be handled by the *users.authenticate*
 module that you'll find in */lib/user/authenticate.js*
 
 
@@ -194,7 +198,8 @@ it is easily extensible in future to cater for new APIs.
 
 ### Handlers for Specific APIs
 
-Each API is handled by its own module file. eg, *GET /api/tags* is handled by */lib/tags/get.js*
+So, as a result of the *routes* object in the *conduit.js* file (described above), each of the
+RealWorld Conduit APIs is handled by its own module file. eg, *GET /api/tags* is handled by */lib/tags/get.js*
 
 You'll find that they all conform to a pretty similar pattern:
 
@@ -207,8 +212,8 @@ by QEWD to the handler module function via the handler function's first argument
   - args.req.body: contains the body payload for POST and PUT requests (if relevant)
   - args.req.query: contains any URI QueryString name/value pairs
 
-  - any variables specified in the route (eg /api/articles/:slug) are available as a property of
-    *args* (eg args.slug) 
+  - any variables specified in the route (eg */api/articles/:slug*) are available as a property of
+    *args* (eg *args.slug*) 
 
 - if the API requires authentication, the JSON Web Token (JWT) is checked against the Secret that
 was used by the QEWD Worker when it was created or updated.  The user Id and Username are extracted 
@@ -267,11 +272,11 @@ Here's some examples of their use in the *qewd-conduit* API handler modules:
 - In */lib/tags/get.js*, it spins through the *conduitArticles* document *byTag* index, using
  the DocumentNode's *forEachChild* method:
 
-     var tags = [];
-     var tagsDoc = new this.documentStore.DocumentNode('conduitArticles', ['byTag']);
-     tagsDoc.forEachChild(function(tag) {
-       tags.push(tag);
-     });
+        var tags = [];
+        var tagsDoc = new this.documentStore.DocumentNode('conduitArticles', ['byTag']);
+        tagsDoc.forEachChild(function(tag) {
+          tags.push(tag);
+        });
 
 [Read this](https://www.slideshare.net/robtweed/ewd-3-training-course-part-22-traversing-documents-using-documentnode-objects)
  for more details on traversing DocumentNode objects.
@@ -317,6 +322,10 @@ Feel free to try it out against the
 
 Note that the demo system is currently a pure REST server only - it doesn't have any markup or front-end
 available for use.
+
+For example, try one of the unauthenticated GET requests:
+
+      http://178.62.26.29:8080/api/tags
 
 ## License
 
