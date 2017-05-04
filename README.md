@@ -312,12 +312,13 @@ I've made a live instance of *qewd-conduit* available at the endpoint:
 Feel free to try it out against the 
 [RealWorld Conduit PostMan Collection](https://github.com/gothinkster/realworld/blob/master/api/Conduit.json.postman_collection)
 
-Note that the demo system is currently a pure REST server only - it doesn't have any markup or front-end
-available for use.
+I've also installed the 
+[React/Redux version of the Conduit UI](https://github.com/gothinkster/react-redux-realworld-example-app)
+on this same server, so you can see the *qewd-conduit* back-end working with it.
 
-For example, try one of the unauthenticated GET requests:
+Point a browser at [http://178.62.26.29:8080](http://178.62.26.29:8080) to try it out.
 
-      http://178.62.26.29:8080/api/tags
+
 
 ## License
 
