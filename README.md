@@ -25,7 +25,8 @@ Google Group for discussions, support, advice etc: [http://groups.google.co.uk/g
   (see below).
 
   *qewd-conduit* uses Redis as a Document Database and Persistent JavaScript Objects.  QEWD itself
-  is a Node.js-based Web Application & REST run-time platform.
+  is a Node.js-based Web Application & REST run-time platform, and is one of the simplest and most
+  productive platforms available for Node.js application development.
 
   [Read my article](https://robtweed.wordpress.com/2017/04/18/having-your-node-js-cake-and-eating-it-too/) 
   that explains the rationale and objectives of QEWD.
@@ -318,6 +319,22 @@ on this same server, so you can see the *qewd-conduit* back-end working with it.
 
 Point a browser at [http://178.62.26.29:8080](http://178.62.26.29:8080) to try it out.
 
+## Is QEWD an Express or Koa.js Framework?
+
+One of the unique features of QEWD is that it isn't tied to any other particular technologies (apart 
+from Node.js!).  So, for example, by default, QEWD's outward-facing HTTP(S) interface is provided by
+Express.  However, simply by making a simple change to your QEWD startup file, you can switch it to
+use Koa.js.  
+[See this article](https://robtweed.wordpress.com/2017/05/11/qewd-now-supports-koa-js-and-uwebsockets/) 
+which explains what you need to do to use Koa.js with QEWD.
+
+You can try out a [QEWD/Koa.js Conduit demo system](http://34.201.135.122:8080/).  It uses exactly the same
+*qewd-conduit* back-end code as the Express-based version described in the previous section.  
+One interesting difference is that the Koa.js version's HTTP response
+headers show the QEWD response time (excluding any network latency, but including database access 
+times). Inspect these response headers in your browser's JavaScript Console and you'll see just how 
+fast QEWD is: you should typically see response times between 3ms - 9ms, 
+and this is on a very modest Amazon EC2 t2.micro instance.
 
 
 ## License
