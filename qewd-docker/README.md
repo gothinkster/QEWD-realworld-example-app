@@ -21,6 +21,16 @@
       ~/qewd-docker-files/routes.js
 
 
+## Start a Redis container
+
+This provides the embedded Document and Session storage for QEWD:
+
+      sudo docker run -d --name redis -p 6379:6379 redis
+
+If you're using a Raspberry Pi:
+
+      sudo docker run -d --name redis -p 6379:6379 hypriot/rpi-redis
+
 
 ## Start the Docker version of QEWD:
 
